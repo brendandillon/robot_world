@@ -1,16 +1,28 @@
-<form action="/robots" method="post">
-  <p>Tell me about yourself, robot friend:</p>
-  <p>Name:</p>
-  <input type='text' name='robot[name]'><br>
-  <p>City:</p>
-  <input type='text' name='robot[city]'><br>
-  <p>State:</p>
-  <input type='text' name='robot[state]'><br>
-  <p>Birthdate:</p>
-  <input type='date' name='robot[birthdate]'><br>
-  <p>Date Hired:</p>
-  <input type='date' name='robot[date_hired]'><br>
-  <p>Department</p>
-  <input type='text' name='robot[department]'>
-  <input value='submit' type='submit'>
+<p>Tell me about yourself, robot friend:</p>
+<form action="/robots" class="col-md-4" method="post">
+  <div class="form-group">
+    <label for='robot[name]'>Name</label>
+    <input type='text' class='form-control' name='robot[name]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[city]'>City</label>
+    <input type='text' class='form-control' name='robot[city]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[state]'>State</label>
+    <input type='text' class='form-control' name='robot[state]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[birthdate]'>Birthdate</label>
+    <input type='date' class='form-control' name='robot[birthdate]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[date_hired]'>Date Hired</label>
+    <input type='date' class='form-control' name='robot[date_hired]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[department]'>Department</label>
+    <input type='text' class='form-control' name='robot[department]'>
+  </div>
+  <input class="btn btn-primary" value='submit' type='submit'>
 </form>

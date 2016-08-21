@@ -1,15 +1,11 @@
 <header>
 <h1>Welcome to Robot World</h1>
 </header>
-
-<ul>
-  <li><a href="/robots">All Robots</a></li>
-  <li><a href="/robots/new">Submit New Robot</a></li>
-</ul>
-
+<div class="col-md-6">
 <h3>Average Age of Robots</h3>
 <%= @statistics_manager.average_age %>
-
+</div>
+<div class="col-md-6">
 <h3>Robots Hired Each Year</h3>
 <table class="table table-striped">
 <% @statistics_manager.robots_by_date_hired.each do |year, count| %>
@@ -19,7 +15,9 @@
   </tr>
 <% end %>
 </table>
+</div>
 
+<div class="col-md-6">
 <h3>Robots From Each City</h3>
 <table class="table table-striped">
 <% @statistics_manager.robots_by_city.each do |city, count| %>
@@ -29,7 +27,9 @@
   </tr>
 <% end %>
 </table>
+</div>
 
+<div class="col-md-6">
 <h3>Robots From Each State</h3>
 <table class="table table-striped">
 <% @statistics_manager.robots_by_state.each do |state, count| %>
@@ -38,9 +38,10 @@
     <td><%= count %></td>
   </tr>
 <% end %>
-
 </table>
+</div>
 
+<div class="col-md-6">
 <h3>Robots In Each Department</h3>
 <table class="table table-striped">
 <% @statistics_manager.robots_by_department.each do |department, count| %>
@@ -49,3 +50,4 @@
     <td><%= count %></td>
   </tr>
 <% end %>
+</div>

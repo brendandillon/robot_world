@@ -1,17 +1,29 @@
 <form action="/robots/<%= @robot.id %>" method="POST">
   <input type='hidden' name='_method' value="PUT">
-  <p>What would you like to change?</p>
-  <p>Name:</p>
-  <input type='text' name='robot[name]' value=<%= @robot.name %>><br>
-  <p>City:</p>
-  <input type='text' name='robot[city]' value=<%= @robot.city %>><br>
-  <p>State:</p>
-  <input type='text' name='robot[state]' value=<%= @robot.state %>><br>
-  <p>Birthdate:</p>
-  <input type='text' name='robot[birthdate]' value=<%= @robot.birthdate %>><br>
-  <p>Date Hired:</p>
-  <input type='text' name='robot[date_hired]' value=<%= @robot.date_hired %>><br>
-  <p>Department</p>
-  <input type='text' name='robot[department]' value=<%= @robot.department %>>
-  <input value='submit' type='submit'>
+
+  <div class="form-group">
+    <label for='robot[name]'>Name</label>
+    <input type='text' class='form-control' value=<%= @robot.name %> name='robot[name]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[city]'>City</label>
+    <input type='text' class='form-control' value=<%= @robot.city %> name='robot[city]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[state]'>State</label>
+    <input type='text' class='form-control' value=<%= @robot.state %> name='robot[state]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[birthdate]'>Birthdate</label>
+    <input type='date' class='form-control' value=<%= @robot.birthdate %> name='robot[birthdate]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[date_hired]'>Date Hired</label>
+    <input type='date' class='form-control' value=<%= @robot.date_hired %> name='robot[date_hired]'>
+  </div>
+  <div class="form-group">
+    <label for='robot[department]'>Department</label>
+    <input type='text' class='form-control' value=<%= @robot.department %> name='robot[department]'>
+  </div>
+  <input class="btn btn-primary" value='submit' type='submit'>
 </form>
