@@ -1,0 +1,51 @@
+<header>
+<h1>Welcome to Robot World</h1>
+</header>
+
+<ul>
+  <li><a href="/robots">All Robots</a></li>
+  <li><a href="/robots/new">Submit New Robot</a></li>
+</ul>
+
+<h3>Average Age of Robots</h3>
+<%= @statistics_manager.average_age %>
+
+<h3>Robots Hired Each Year</h3>
+<table class="table table-striped">
+<% @statistics_manager.robots_by_date_hired.each do |year, count| %>
+  <tr>
+    <td><%= year %></td>
+    <td><%= count %></td>
+  </tr>
+<% end %>
+</table>
+
+<h3>Robots From Each City</h3>
+<table class="table table-striped">
+<% @statistics_manager.robots_by_city.each do |city, count| %>
+  <tr>
+    <td><%= city %></td>
+    <td><%= count %></td>
+  </tr>
+<% end %>
+</table>
+
+<h3>Robots From Each State</h3>
+<table class="table table-striped">
+<% @statistics_manager.robots_by_state.each do |state, count| %>
+  <tr>
+    <td><%= state %></td>
+    <td><%= count %></td>
+  </tr>
+<% end %>
+
+</table>
+
+<h3>Robots In Each Department</h3>
+<table class="table table-striped">
+<% @statistics_manager.robots_by_department.each do |department, count| %>
+  <tr>
+    <td><%= department %></td>
+    <td><%= count %></td>
+  </tr>
+<% end %>
